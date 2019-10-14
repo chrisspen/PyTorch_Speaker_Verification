@@ -154,7 +154,11 @@ def test(model_path):
     print("\n EER across {0} epochs: {1:.4f}".format(hp.test.epochs, avg_EER))
         
 if __name__=="__main__":
-    if hp.training:
-        train(hp.model.model_path)
-    else:
+    import argparse
+    parser = argparse.ArgumentParser(description='Trains or tests data.')
+    parser.add_argument('--test', action='store_true', default=False, help='Tests previously trained model.')
+    args = parser.parse_args()
+    if args.test:
         test(hp.model.model_path)
+    else:
+        train(hp.model.model_path)

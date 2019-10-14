@@ -33,17 +33,13 @@ Two folders will be created, train_tisv and test_tisv, containing .npy files con
 # Training
 
 To train the speaker verification model, run:
-```
-./train_speech_embedder.py 
-```
-with the following config.yaml key set to true:
-```yaml
-training: !!bool "true"
-```
-for testing, set the key value to:
-```yaml
-training: !!bool "false"
-```
+
+    ./train_speech_embedder.py 
+
+To test, run:
+
+    ./train_speech_embedder.py --test
+
 The log file and checkpoint save locations are controlled by the following values:
 ```yaml
 log_file: './speech_id_checkpoint/Stats'

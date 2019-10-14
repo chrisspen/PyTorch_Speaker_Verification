@@ -1,7 +1,10 @@
 *.out
 *.geany
 /.env
+/.cenv*
 /TIMIT*
 __pycache__
 /test_tisv
 /train_tisv
+/speech_id_checkpoint
+/Results

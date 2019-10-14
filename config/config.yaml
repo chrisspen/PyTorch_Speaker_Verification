@@ -1,5 +1,6 @@
 training: !!bool "true"
-device: "cuda"
+#device: "cuda"
+device: "cpu"
 unprocessed_data: './TIMIT/*/*/*/*.wav'
 ---
 data:
@@ -29,7 +30,8 @@ train:
     epochs: 950 #Max training speaker epoch 
     log_interval: 30 #Epochs before printing progress
     log_file: './speech_id_checkpoint/Stats'
-    checkpoint_interval: 120 #Save model after x speaker epochs
+    #checkpoint_interval: 120 #Save model after x speaker epochs
+    checkpoint_interval: 10 #Save model after x speaker epochs
     checkpoint_dir: './speech_id_checkpoint'
     restore: !!bool "false" #Resume training from previous model path
 ---

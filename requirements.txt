@@ -1,5 +1,7 @@
 numpy>=1.15.4
 webrtcvad
-torch>=0.4.1
+#torch>=0.4.1
+#https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
+#torchvision
 librosa>=0.6.1
 pyyaml>=5.1.2
