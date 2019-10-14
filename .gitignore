@@ -1,4 +1,7 @@
 *.out
 *.geany
 /.env
-/TIMIT
+/TIMIT*
+__pycache__
+/test_tisv
+/train_tisv
